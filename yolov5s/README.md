@@ -2,14 +2,14 @@
 
 The Pytorch implementation is [ultralytics/yolov5](https://github.com/ultralytics/yolov5).
 
-I was using [ultralytics/yolov5](https://github.com/ultralytics/yolov5)(Commits on Jun 23, 2020). And I made a copy of [yolov5s.pt(google drive)](https://drive.google.com/file/d/1w38DgmrP3iwiJi_AOdabuuE_zanMhO5_/view?usp=sharing). Just in case the yolov5 model updated.
+I was using [ultralytics/yolov5](https://github.com/ultralytics/yolov5)(The latest verison). Just in case the yolov5 model updated.
 
 ## How to Run
 
 ```
 1. generate yolov5s.wts from pytorch implementation with yolov5s.pt
 
-git clone https://github.com/wang-xinyu/tensorrtx.git
+git clone https://github.com/AIpakchoi/yolov5_tensorrt/tree/master/yolov5s
 git clone https://github.com/ultralytics/yolov5.git
 // download its weights 'yolov5s.pt'
 cd yolov5
@@ -48,8 +48,3 @@ sudo ./yolov5s -d  ../samples // deserialize plan file and run inference, the im
 - NMS thresh in yolov5s.cpp
 - BBox confidence thresh in yolov5s.cpp
 - Batch size in yolov5s.cpp
-
-## More Information
-
-See the readme in [home page.](https://github.com/wang-xinyu/tensorrtx)
-
