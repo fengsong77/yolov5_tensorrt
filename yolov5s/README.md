@@ -2,25 +2,25 @@
 
 The Pytorch implementation is [ultralytics/yolov5](https://github.com/ultralytics/yolov5).
 
-I was using [ultralytics/yolov5](https://github.com/ultralytics/yolov5)(The latest verison). Just in case the yolov5 model updated.
+I was using [ultralytics/yolov5](https://github.com/ultralytics/yolov5)(The latest version). Just in case the yolov5 model updated.
 
 ## How to Run
 
 ```
-1. generate yolov5s.wts from pytorch implementation with yolov5s.pt
+1. generate yolov5m.wts from pytorch implementation with yolov5.pt
 
-git clone https://github.com/AIpakchoi/yolov5_tensorrt/tree/master/yolov5s
+git clone https://github.com/AIpakchoi/yolov5_tensorrt.git
 git clone https://github.com/ultralytics/yolov5.git
 // download its weights 'yolov5s.pt'
-cd yolov5
+cd /yolov5_tensorrt/yolov5s
 cp ../tensorrtx/yolov5s/gen_wts.py .
 python gen_wts.py
-// a file 'yolov5s.wts' will be generated.
+// a file 'yolov5m.wts' will be generated.
 
-2. put yolov5s.wts into yolov5, build and run
+2. put yolov5s.wts into yolov5s, build and run
 
-mv yolov5s.wts ../tensorrtx/yolov5/
-cd ../tensorrtx/yolov5
+mv yolov5s.wts ../yolov5_tensorrt/yolov5s/
+cd ../yolov5_tensorrt/yolov5s
 mkdir build
 cd build
 cmake ..
