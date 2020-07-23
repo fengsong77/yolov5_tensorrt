@@ -2,31 +2,31 @@
 
 The Pytorch implementation is [ultralytics/yolov5](https://github.com/ultralytics/yolov5).
 
-I was using [ultralytics/yolov5](https://github.com/ultralytics/yolov5)(Commits on Jun 23, 2020). And I made a copy of [yolov5s.pt(google drive)](https://drive.google.com/file/d/1w38DgmrP3iwiJi_AOdabuuE_zanMhO5_/view?usp=sharing). Just in case the yolov5 model updated.
+I was using [ultralytics/yolov5](https://github.com/ultralytics/yolov5)(The latest version). Just in case the yolov5 model updated.
 
 ## How to Run
 
 ```
-1. generate yolov5s.wts from pytorch implementation with yolov5s.pt
+1. generate yolov5l.wts from pytorch implementation with yolov5.pt
 
-git clone https://github.com/wang-xinyu/tensorrtx.git
+git clone https://github.com/AIpakchoi/yolov5_tensorrt.git
 git clone https://github.com/ultralytics/yolov5.git
-// download its weights 'yolov5s.pt'
+// download its weights 'yolov5l.pt'
 cd yolov5
-cp ../tensorrtx/yolov5s/gen_wts.py .
+cp ../yolov5_tensorrt/yolov5l/gen_wts.py .
 python gen_wts.py
-// a file 'yolov5s.wts' will be generated.
+// a file 'yolov5l.wts' will be generated.
 
-2. put yolov5s.wts into yolov5, build and run
+2. put yolov5l.wts into yolov5l, build and run
 
-mv yolov5s.wts ../tensorrtx/yolov5/
-cd ../tensorrtx/yolov5
+mv yolov5l.wts ../yolov5_tensorrt/yolov5l/
+cd ../yolov5_tensorrt/yolov5l
 mkdir build
 cd build
 cmake ..
 make
-sudo ./yolov5s -s             // serialize model to plan file i.e. 'yolov5s.engine'
-sudo ./yolov5s -d  ../samples // deserialize plan file and run inference, the images in samples will be processed.
+sudo ./yolov5l -s             // serialize model to plan file i.e. 'yolov5l.engine'
+sudo ./yolov5l -d  ../samples // deserialize plan file and run inference, the images in samples will be processed.
 
 3. check the images generated, as follows. _zidane.jpg and _bus.jpg
 ```
@@ -43,13 +43,8 @@ sudo ./yolov5s -d  ../samples // deserialize plan file and run inference, the im
 
 - Input shape defined in yololayer.h
 - Number of classes defined in yololayer.h
-- FP16/FP32 can be selected by the macro in yolov5s.cpp
-- GPU id can be selected by the macro in yolov5s.cpp
-- NMS thresh in yolov5s.cpp
-- BBox confidence thresh in yolov5s.cpp
-- Batch size in yolov5s.cpp
-
-## More Information
-
-See the readme in [home page.](https://github.com/wang-xinyu/tensorrtx)
-
+- FP16/FP32 can be selected by the macro in yolov5m.cpp
+- GPU id can be selected by the macro in yolov5m.cpp
+- NMS thresh in yolov5m.cpp
+- BBox confidence thresh in yolov5m.cpp
+- Batch size in yolov5m.cpp
