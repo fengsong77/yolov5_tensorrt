@@ -17,7 +17,7 @@ cp ../yolov5_tensorrt/yolov5m/gen_wts.py .
 python gen_wts.py
 // a file 'yolov5m.wts' will be generated.
 
-2. put yolov5m.wts into yolov5s, build and run
+2. put yolov5m.wts into yolov5m, build and run
 
 mv yolov5m.wts ../yolov5_tensorrt/yolov5m/
 cd ../yolov5_tensorrt/yolov5m
