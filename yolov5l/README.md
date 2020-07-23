@@ -43,8 +43,8 @@ sudo ./yolov5l -d  ../samples // deserialize plan file and run inference, the im
 
 - Input shape defined in yololayer.h
 - Number of classes defined in yololayer.h
-- FP16/FP32 can be selected by the macro in yolov5m.cpp
-- GPU id can be selected by the macro in yolov5m.cpp
-- NMS thresh in yolov5m.cpp
-- BBox confidence thresh in yolov5m.cpp
-- Batch size in yolov5m.cpp
+- FP16/FP32 can be selected by the macro in yolov5l.cpp
+- GPU id can be selected by the macro in yolov5l.cpp
+- NMS thresh in yolov5l.cpp
+- BBox confidence thresh in yolov5l.cpp
+- Batch size in yolov5l.cpp
